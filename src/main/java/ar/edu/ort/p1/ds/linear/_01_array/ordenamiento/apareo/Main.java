@@ -6,43 +6,62 @@ public class Main {
 
 	public static void main(String[] args) {
 
+		// Se crean dos listas de enteros ORDENADAS de forma ascendente
 		int[] primeraLista = new int[] { 8, 10, 11, 16, 21, 22, 30, 32, 33, 35, 50 };
-
 		int[] segundaLista = new int[] { 6, 9, 13, 14, 25, 27, 31 };
 
-		int[] res = apareo(primeraLista, segundaLista);
-		System.out.println(Arrays.toString(res));
-		
-		
-		int[] lista1 = {1, 2, 3};  
-		int[] lista2 = {4, 5, 6};
-		
-		int[] resultado = apareo(lista1, lista2);
-		System.out.println(Arrays.toString(resultado));
+		// Se imprime el resultado del apareo (unión ordenada) de ambas listas
+		System.out.println(Arrays.toString(apareo(primeraLista, segundaLista)));
 
 	}
 
-	 static int[] apareo(final int[] primeraLista, final int[] segundaLista) {
+	/**
+	 * Realiza el apareo (merge) de dos listas ordenadas de enteros.
+	 * 
+	 * Devuelve una nueva lista que contiene todos los elementos de ambas listas,
+	 * tambien ordenada.
+	 * 
+	 * @param primeraLista lista ordenada de enteros
+	 * @param segundaLista otra lista ordenada de enteros
+	 * @return nueva lista ordenada que resulta de mezclar las dos anteriores
+	 */
+	private static int[] apareo(final int[] primeraLista, final int[] segundaLista) {
+
+		// i y j son indices para recorrer las listas originales
+		// k es el indice para la lista resultante
 		int i = 0, j = 0, k = 0;
+
+		// Se crea un arreglo resultado del tamanio combinado de ambas listas
 		int[] result = new int[primeraLista.length + segundaLista.length];
+
+		// Mientras no se llegue al final de ninguna de las listas
 		while (i < primeraLista.length && j < segundaLista.length) {
+
+			// Se compara el elemento actual de cada lista
+			// Se copia el menor al arreglo resultado
 			if (primeraLista[i] < segundaLista[j]) {
 				result[k] = primeraLista[i];
-				i++;
+				i++; // Avanzamos en la primera lista
 			} else {
 				result[k] = segundaLista[j];
-				j++;
+				j++; // Avanzamos en la segunda lista
 			}
-			k++;
+			k++; // Avanzamos en el arreglo resultado
 		}
+
+		// Si quedan elementos en la primera lista, los copiamos al final del resultado
 		for (int t = i; t < primeraLista.length; t++) {
 			result[k] = primeraLista[t];
 			k++;
 		}
-		for (int t = j; j < segundaLista.length; t++) {
+
+		// Si quedan elementos en la segunda lista, los copiamos al final del resultado
+		for (int t = j; t < segundaLista.length; t++) {
 			result[k] = segundaLista[t];
 			k++;
 		}
+
+		// Devolvemos el arreglo ordenado resultante
 		return result;
 	}
 
