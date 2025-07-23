@@ -4,7 +4,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ar.edu.ort</groupId>
-	<artifactId>ort-p1-operaciones-sobre-arrays</artifactId>
+	<artifactId>operaciones-sobre-arrays</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
