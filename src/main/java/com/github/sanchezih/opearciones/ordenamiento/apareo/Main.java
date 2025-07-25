@@ -1,4 +1,4 @@
-package ar.edu.ort.p1.ds.linear._01_array.ordenamiento.apareo;
+package com.github.sanchezih.opearciones.ordenamiento.apareo;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package ar.edu.ort.p1.ds.linear._01_array.busqueda.binaria;
+package com.github.sanchezih.opearciones.busqueda.binaria;
 
 public class Main {
 

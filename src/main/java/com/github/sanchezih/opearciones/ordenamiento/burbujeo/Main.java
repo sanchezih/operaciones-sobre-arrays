@@ -1,4 +1,4 @@
-package ar.edu.ort.p1.ds.linear._01_array.ordenamiento.burbujeo;
+package com.github.sanchezih.opearciones.ordenamiento.burbujeo;
 
 import java.util.Arrays;
 

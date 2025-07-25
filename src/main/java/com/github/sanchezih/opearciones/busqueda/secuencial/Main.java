@@ -1,4 +1,4 @@
-package ar.edu.ort.p1.ds.linear._01_array.busqueda.secuencial;
+package com.github.sanchezih.opearciones.busqueda.secuencial;
 
 public class Main {
 
